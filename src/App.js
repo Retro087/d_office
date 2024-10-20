@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router";
+import "./App.css";
+import Sidebar from "./components/sidebar";
+import UsersContainer from "./containers/users-container";
+import UsersPage from "./pages/users";
+import WorkPlacesPage from "./pages/workplaces";
+import BookingPage from "./pages/booking";
+import { useSelector } from "react-redux";
+import LoginContainer from "./containers/login-container";
+import HeaderContainer from "./containers/header-container";
+import RecordPage from "./pages/record";
 
 function App() {
+  const selector = useSelector((state) => ({
+    admin: state.auth.admin,
+    isAuth: state.auth.isAuth,
+  }));
+
+  if (!selector.isAuth) {
+    return <LoginContainer />;
+  }
+
+  if (selector.admin) {
+    return (
+      <>
+        <Routes>
+          <Route path="/" element={<UsersPage />} />
+          <Route path="/wp" element={<WorkPlacesPage />} />
+          <Route path="/booking" element={<BookingPage />} />
+        </Routes>
+      </>
+    );
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<RecordPage />} />
+      </Routes>
+    </>
   );
 }
 

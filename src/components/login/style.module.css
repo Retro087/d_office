@@ -1,0 +1,32 @@
+.form{
+    width: 350px;
+    height: 400px;
+    background-color: #00000033;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.p{
+    text-align: center;
+    font-weight: 500;
+}
+
+.input{
+    margin-bottom: 45px;
+    width: 278px;
+    height: 40px;
+}
+
+.wrap{
+    box-sizing: border-box;
+    padding-top: 50px;
+    width: 278px;
+    margin: 0 auto;
+}
+
+.btn{
+    box-sizing: border-box;
+    background-color: #555151B2;
+    padding: 10px 20px;
+    border: none;
+}

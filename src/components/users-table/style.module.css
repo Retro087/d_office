@@ -1,0 +1,26 @@
+
+.title{
+    min-width: 150px;
+    height: 75px;
+    text-align: center;
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+
+}
+
+.item{
+    background-color: #DFDFDF;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.list{
+    margin: 0 auto;
+
+}
+
+.table{
+    text-align: center;
+}
+

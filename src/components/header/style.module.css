@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.profile{
+    display: flex;
+}
+
+.link{
+    margin-right: 10px;
+    text-decoration: none;
+}

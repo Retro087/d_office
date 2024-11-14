@@ -1,8 +1,10 @@
 import React from "react";
 import Sidebar from "../../components/sidebar";
 
-import UsersTable from "../../components/users-table";
+import UsersTable from "../../components/users-list";
 import { useDispatch, useSelector } from "react-redux";
+import ContainerLayout from "../../components/container-layout";
+import UsersList from "../../components/users-list";
 
 const UsersContainer = () => {
   const dispatch = useDispatch();
@@ -11,7 +13,9 @@ const UsersContainer = () => {
   }));
   return (
     <>
-      <UsersTable list={select.users} />
+      <ContainerLayout width="1120px">
+        <UsersList title="Users" list={select.users} />
+      </ContainerLayout>
     </>
   );
 };

@@ -22,6 +22,7 @@ const Sidebar = (props) => {
       >
         Брони
       </NavLink>
+      <button onClick={() => props.logout()}>Выйти</button>
     </div>
   );
 };

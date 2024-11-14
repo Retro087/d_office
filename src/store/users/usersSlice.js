@@ -7,7 +7,12 @@ const fetchUsersAsync = createAsyncThunk("users/fetchUsers", async () => {
 
 const initialState = {
   users: [
-    { id: 1, login: "retr0", name: "vova" },
+    {
+      id: 1,
+      login:
+        "retr0rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrsefesfesefrrrrrrrrrrrrrrrrrrrrr sefsefsef sef sef se f",
+      name: "vova",
+    },
     { id: 2, login: "retsfefsr0", name: "drgdrgdr" },
     { id: 2, login: "retsfefsr0", name: "drgdrgdr" },
     { id: 2, login: "retsfefsr0", name: "drgdrgdr" },

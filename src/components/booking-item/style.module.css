@@ -1,0 +1,27 @@
+.item{
+    word-break: break-all;
+    
+    width: 150px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.item_wrap{
+    min-height: 48px;
+    width: 100%;
+    background-color: #FFF;
+    border-bottom: 1px solid #BCB6B6;
+    display: flex;
+    align-items: center;
+}
+
+.item_name{
+    word-break: break-all;
+    width: 250px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.checkbox{
+    margin-right: 50px;
+}

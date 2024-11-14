@@ -1,5 +1,5 @@
 import React from "react";
-import Date from "../../components/date";
+import Date from "../../components/date-calendar";
 
 const RecordContainer = () => {
   return (

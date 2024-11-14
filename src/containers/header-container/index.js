@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const HeaderContainer = () => {
   const selector = useSelector((state) => ({
-    profile: state.auth.profile,
+    profile: state.profile.profile,
   }));
   return (
     <div>

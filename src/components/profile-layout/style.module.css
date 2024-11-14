@@ -1,0 +1,11 @@
+.wrap{
+    margin: 0 auto;
+    width: 928px;
+    row-gap: 30px;
+    column-gap: 19px;
+    display: grid;
+    grid-template-areas: 
+    "main main"
+    "d p"
+    'd c';
+}

@@ -1,0 +1,33 @@
+.wrap{
+    width: 268px;
+    min-height: 368px;
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    padding: 16px 19px ;
+    box-sizing: border-box;
+    grid-area: d;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+.item{
+    margin-bottom: 20px;
+}
+.value{
+    font-weight: 600;
+    font-size: 11px;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.item_title{
+    margin: 0;
+    font-weight: 400;
+    font-size: 7px;
+    color: #303030;
+}

@@ -9,6 +9,8 @@ import { useSelector } from "react-redux";
 import LoginContainer from "./containers/login-container";
 import HeaderContainer from "./containers/header-container";
 import RecordPage from "./pages/record";
+import ProfileContainer from "./containers/profile-container";
+import ProfilePage from "./pages/profile";
 
 function App() {
   const selector = useSelector((state) => ({
@@ -35,6 +37,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<RecordPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </>
   );

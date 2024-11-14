@@ -1,0 +1,38 @@
+.wrap{
+    width: 641px;
+    min-height: 152px;
+    border-radius: 15px;
+    background-color: #F8F8F8;
+    padding: 13px 24px;
+    position: relative;
+    box-sizing: border-box;
+    grid-area: c;
+}
+
+
+.title{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.item{
+    margin-bottom: 16px;
+    color: #303030;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.edit{
+    right: 12px;
+    top: 11px;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFF;
+    background-color: #4B53FE;
+    padding: 6px 20px;
+    box-sizing: border-box;
+}

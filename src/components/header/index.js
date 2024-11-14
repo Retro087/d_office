@@ -1,16 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import s from "./style.module.css";
+import logo from "../../assets/logo.png";
 const Header = (props) => {
   return (
     <div className={s.header}>
-      <div>
-        <NavLink className={s.link} to={"/"}>
-          Главная
-        </NavLink>
-        <NavLink className={s.link} to={"/books"}>
-          Мои записи
-        </NavLink>
+      <div className={s.office}>
+        <img src={logo} />
       </div>
 
       <div className={s.profile}>

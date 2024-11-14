@@ -1,64 +1,30 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import Sidebar from "../../components/sidebar";
-import UsersList from "../../components/users-table";
+import UsersList from "../../components/users-list";
 import BookingTable from "../../components/booking-table";
+import ContainerLayout from "../../components/container-layout";
+import { useDispatch, useSelector } from "react-redux";
+
+import { setEvents } from "../../store/booking/bookingSlice";
+import DateCalendar from "../../components/date-calendar";
+import Map from "../../components/map";
+import CalendarSidebar from "../../components/calendar-sidebar";
 
 const BookingContainer = () => {
-  const books = [
-    { id: 1, login: "retr0", name: "vova", date: "15.01.2024", wp_id: 23 },
-    {
-      id: 2324234,
-      login: "retsfefsr0sefsefsefsefsef",
-      name: "drgdrgdrseffffffffffffffffffffffffffffffggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
-      date: "15.01.2024",
-      wp_id: 23,
-    },
-    {
-      id: 2,
-      login: "retsfefsr0",
-      name: "drgdrgdr",
-      date: "14.01.2024",
-      wp_id: 23233,
-    },
-    {
-      id: 34,
-      login: "retsfefsr0",
-      name: "drgdrgdr",
-      date: "13.01.2024",
-      wp_id: 23342,
-    },
-    {
-      id: 24566,
-      login: "retsfefsr0",
-      name: "drgdrgdr",
-      date: "12.01.2024",
-      wp_id: 234533,
-    },
-    {
-      id: 24566,
-      login: "retsfefsr0",
-      name: "drgdrgdr",
-      date: "11.01.2024",
-      wp_id: 234533,
-    },
-    {
-      id: 24566,
-      login: "retsfefsr0",
-      name: "drgdrgdr",
-      date: "10.01.2024",
-      wp_id: 234533,
-    },
-    {
-      id: 24566,
-      login: "retsfefsr0",
-      name: "drgdrgdr",
-      date: "16.01.2024",
-      wp_id: 234533,
-    },
-  ];
+  const dispatch = useDispatch();
+
+  const select = useSelector((state) => ({
+    events: state.booking.events,
+  }));
+  const callbacks = {
+    setEvents: useCallback((events) => dispatch(setEvents(events)), []),
+  };
+
   return (
     <>
-      <BookingTable list={books} />
+      <ContainerLayout width="1120px">
+        <DateCalendar setEvents={callbacks.setEvents} events={select.events} />
+      </ContainerLayout>
     </>
   );
 };
